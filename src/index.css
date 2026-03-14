@@ -1,0 +1,53 @@
+:root {
+  /* Modern Performance Palette */
+  --brand-hue: 260;
+  --bg-color: hsl(var(--brand-hue), 20%, 98%);
+  --text-main: hsl(var(--brand-hue), 40%, 10%);
+  --text-dim: hsl(var(--brand-hue), 10%, 40%);
+  --accent: hsl(var(--brand-hue), 80%, 60%);
+  --accent-soft: hsl(var(--brand-hue), 80%, 95%);
+  --card-bg: hsl(0, 0%, 100%);
+  --border: hsl(var(--brand-hue), 10%, 90%);
+  --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+  
+  --font-sans: 'Inter', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, sans-serif;
+  
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme='dark'] {
+  --bg-color: hsl(var(--brand-hue), 20%, 5%);
+  --text-main: hsl(var(--brand-hue), 20%, 95%);
+  --text-dim: hsl(var(--brand-hue), 10%, 70%);
+  --accent: hsl(var(--brand-hue), 80%, 70%);
+  --accent-soft: hsl(var(--brand-hue), 80%, 15%);
+  --card-bg: hsl(var(--brand-hue), 20%, 8%);
+  --border: hsl(var(--brand-hue), 15%, 15%);
+  --shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 15px;
+  }
+}
